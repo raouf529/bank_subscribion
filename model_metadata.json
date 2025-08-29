@@ -1,9 +1,9 @@
 {
-    "optimal_threshold": 0.36991968750953674,
+    "optimal_threshold": 0.3449169099330902,
     "metrics_at_threshold": {
-        "precision": 0.7078904027549034,
-        "recall": 0.7791266135677012,
-        "f1_score": 0.7418022069975421,
+        "precision": 0.6943325661680092,
+        "recall": 0.7954408129634716,
+        "f1_score": 0.7414556718978008,
         "dataset_info": "banking prediction"
     }
 }

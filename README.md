@@ -85,17 +85,12 @@ This project was developed as part of the Kaggle Playground Series - S5E8 compet
 
 ## fine tune and threshold tuning:
 - hyperparameter tuning for xgboost using RandomizedSearchCV
-- threshold tuning for xgboost, new threshold is 0.37
-
-- after fine tuning:
-| Model | threshold| F1 | Precision | Recall | roc_auc |
-|-------|----------|----|-----------|--------|---------|
-| fine tune xgboost | 0.94 | 0.72 | 0.77 | 0.68 | 0.97 |
+- threshold tuning for xgboost, new threshold is 0.35
 
 - after threshold tuning:
 | Model | threshold| F1 | Precision | Recall | 
 |-------|----------|----|-----------|--------|
-| fine tune xgboost | 0.37 | 0.74 | 0.71 | 0.77 |
+| fine tune xgboost | 0.35 | 0.74 | 0.69 | 0.80 |
 
 - after threshold tuning recall increased and precision decreased.
 
@@ -105,7 +100,7 @@ This project was developed as part of the Kaggle Playground Series - S5E8 compet
 
 | Model | threshold| F1 | Precision | Recall | roc_auc |
 |-------|----------|----|-----------|--------|---------|
-| test set eval | 0.93 | 0.74 | 0.71 | 0.78 | 0.97 |
+| test set eval | 0.93 | 0.74 | 0.69 | 0.80 | 0.97 |
 
 - The final model demonstrates strong performance on the test set, with a balanced precision and recall.
 

@@ -1,8 +1,8 @@
 import joblib
 import json
 import pandas as pd
-from src.custom_transformers import AddDropFeatures  # make sure this is available
-
+#from costumetransform import AddDropFeatures  
+from  costumetransform import AddDropFeatures
 # === Load model ===
 model = joblib.load("banking_prediction.pkl")
 
@@ -16,29 +16,29 @@ print(f"Loaded model with threshold: {threshold:.3f}")
 # === Example usage ===
 # (replace with real test data)
 sample_data = pd.DataFrame([{
-    "age": 35,
-    "job": "management",
+    "id": 482913,
+    "age": 37,
+    "job": "technician",
     "marital": "married",
-    "education": "tertiary",
+    "education": "secondary",
     "default": "no",
-    "balance": 1500,
+    "balance": 1567,
     "housing": "yes",
     "loan": "no",
     "contact": "cellular",
-    "day": 15,
+    "day": 12,
     "month": "may",
-    "duration": 300,
+    "duration": 321,
     "campaign": 2,
-    "pdays": 999,
+    "pdays": -1,
     "previous": 0,
     "poutcome": "unknown"
-}])
+}
+])
 
 # get predicted probability
-proba = model.predict_proba(sample_data)[:, 1]
+proba = model.predict(sample_data)
 
 # apply threshold
 prediction = (proba >= threshold).astype(int)
-
-print("Predicted probability:", proba[0])
 print("Final prediction (with threshold):", prediction[0])
